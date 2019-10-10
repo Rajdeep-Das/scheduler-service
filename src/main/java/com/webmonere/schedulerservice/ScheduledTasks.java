@@ -29,8 +29,8 @@ public class ScheduledTasks {
     @Scheduled(fixedRate = 30000)
     public void scheduleTaskWithFixedRate() {
 
-        logger.info("Fixed Rate Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()) );
-        logger.info(hostnameService.getAllHostNames().toString());
+//        logger.info("Fixed Rate Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()) );
+//        logger.info(hostnameService.getAllHostNames().toString());
 
         if(!hostnameService.getAllHostNames().isEmpty()) {
             for (Hostname hostname : hostnameService.getAllHostNames()) {

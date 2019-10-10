@@ -20,11 +20,11 @@
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client -->
-		<dependency>
-			<groupId>com.google.http-client</groupId>
-			<artifactId>google-http-client</artifactId>
-			<version>1.32.1</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.google.http-client</groupId>-->
+<!--			<artifactId>google-http-client</artifactId>-->
+<!--			<version>1.32.1</version>-->
+<!--		</dependency>-->
 		<!-- Pull in as a traditional dependency -->
 		<dependency>
 			<groupId>com.konghq</groupId>
