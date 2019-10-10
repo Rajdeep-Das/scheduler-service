@@ -12,5 +12,4 @@ cache:
     - $HOME/.m2
     - $HOME/.gradle
 install: true
-
 script:   ./mvnw clean install
