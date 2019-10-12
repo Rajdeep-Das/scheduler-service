@@ -89,6 +89,7 @@
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
 				</configuration>
 			</plugin>
+			<!-- tag::unpack[] -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -109,9 +110,19 @@
 							</artifactItems>
 						</configuration>
 					</execution>
+					<execution>
+						<id>default</id>
+						<phase>install</phase>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
 				</executions>
 			</plugin>
+			<!-- end::unpack[] -->
 		</plugins>
 	</build>
+
 
 </project>
