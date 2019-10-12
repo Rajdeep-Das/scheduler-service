@@ -1,5 +1,5 @@
 language: java
-jdk: oraclejdk11
+jdk: openjdk8
 services:
   - postgresql
   - docker
@@ -15,5 +15,5 @@ cache:
     - $HOME/.gradle
 install: true
 script:
-  - $ ./mvnw clean install dockerfile:build
+  - $ ./mvnw clean install
 
