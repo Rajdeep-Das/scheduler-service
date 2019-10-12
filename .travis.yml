@@ -14,4 +14,4 @@ cache:
     - $HOME/.m2
     - $HOME/.gradle
 install: true
-script:   ./mvnw deploy >> /dev/null
+script: ./mvnw install dockerfile:build
