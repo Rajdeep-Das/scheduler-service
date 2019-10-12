@@ -9,9 +9,7 @@ before_install:
   - chmod +x mvnw
   - export MAVEN_OPTS=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 # cache the build tool's caches
-# Test
-  travis env set DOCKER_USERNAME rajdeepdas
-  travis env set DOCKER_PASSWORD RajdeepDas0526
+
 cache:
   directories:
     - $HOME/.m2
