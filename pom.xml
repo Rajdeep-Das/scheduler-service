@@ -110,13 +110,6 @@
 							</artifactItems>
 						</configuration>
 					</execution>
-					<execution>
-						<id>default</id>
-						<phase>install</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
 				</executions>
 			</plugin>
 			<!-- end::unpack[] -->
