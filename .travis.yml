@@ -16,5 +16,5 @@ cache:
     - $HOME/.gradle
 install: true
 script:
-  - ./mvnw package docker:build
+  - ./mvnw clean install
 
