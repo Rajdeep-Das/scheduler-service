@@ -17,4 +17,5 @@ cache:
 install: true
 script:
   - ./mvnw clean install
+  - ./mvnw dockerfile:push
 
