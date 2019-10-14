@@ -1,20 +1,18 @@
-# Start with a base image containing Java runtime
+FROM openjdk:8-jdk-alpine as build
+WORKDIR /workspace/app
+
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
+COPY src src
+
+RUN ./mvnw install -DskipTests
+RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
 FROM openjdk:8-jdk-alpine
-
-# Add Maintainer Info
-LABEL maintainer="rajdeepdas.india@gmail.com"
-
-# Add a volume pointing to /tmp
 VOLUME /tmp
-
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
-
-# The application's jar file
-ARG JAR_FILE=target/scheduler-service-0.0.1-SNAPSHOT.jar
-
-# Add the application's jar to the container
-ADD ${JAR_FILE} scheduler-service.jar
-
-#
-ENTRYPOINT ["java","-jar","/scheduler-service.jar.jar"]
+ARG DEPENDENCY=/workspace/app/target/dependency
+COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
+COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
+COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
+ENTRYPOINT ["java","-cp","app:app/lib/*","SchedulerserviceApplication.Application"]
