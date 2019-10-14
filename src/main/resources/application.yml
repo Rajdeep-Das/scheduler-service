@@ -4,7 +4,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASS}
+    url: jdbc:postgresql://localhost:5432/webmonere_main
+    username: webmonere
+    password: RajdeepDas0526
 
