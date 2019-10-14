@@ -18,6 +18,7 @@ cache:
 install: true
 script:
   - ./mvnw clean package
+  - docker build -t rajdeepdas/scheduler-service .
 
 
 
