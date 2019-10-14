@@ -17,7 +17,7 @@ cache:
     - $HOME/.gradle
 install: true
 script:
-  - ./mvnw clean package
+  - ./mvnw clean test
   - docker build -t rajdeepdas/scheduler-service .
   - docker push rajdeepdas/scheduler-service
 
