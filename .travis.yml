@@ -5,6 +5,7 @@ services:
   - docker
 before_script:
   - psql -c 'create database webmonere_main;' -U postgres
+  - psql -c 'CREATE USER webmonere WITH PASSWORD 'RajdeepDas0526';'
 before_install:
   - chmod +x mvnw
   - export MAVEN_OPTS=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
