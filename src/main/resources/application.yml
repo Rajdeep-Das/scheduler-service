@@ -5,6 +5,6 @@ spring:
       ddl-auto: create-drop
   datasource:
     url: jdbc:postgresql://localhost:5432/webmonere_main
-    username: webmonere
-    password: RajdeepDas0526
+    username: postgres
+    password:
 
